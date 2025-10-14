@@ -8,9 +8,15 @@
     <ul class="list flex flex-col items-start justify-center">
       {#each data.articles as article }
         <li class="cursor-pointer text-md">
-          <a href="/news/{article.slug}">{ article.title }</a>
+          <a href="/news/{article.slug}">- { article.title }</a>
         </li>
       {/each}
     </ul>
   </div>
 </div>
+
+<style>
+  a:visited {
+    color: steelblue;
+  }
+</style>

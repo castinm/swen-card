@@ -15,7 +15,7 @@
 </script>
 
 <div class="card {type} {side === Side.Front ? 'front': 'back'} rounded-md relative overflow-hidden text-white box-border">
-  <div class="content absolute inset-0">
+  <div class="content rounded-md absolute inset-0">
     <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{image_url}');">
       <div class="overlay absolute inset-0 bg-[#232323] opacity-70"></div>
     </div>
@@ -38,6 +38,13 @@
   :global(.card .content .back) {
     transform: rotateY(180deg);
   }
+
+  :global(.card.front .back) { z-index: 1; }
+  :global(.card.front .front) { z-index: 2; }
+
+  :global(.card.back .front) { z-index: 1; }
+  :global(.card.back .back) { z-index: 2; }
+
   .card.back .content {
     transform: rotateY(180deg);
   }

@@ -65,4 +65,8 @@
   .footer.recommended .actions {
     gap: 50px;
   }
+  .preview:hover svg {
+    transition: transform 500ms linear;
+    transform: translateX(3px);
+  }
 </style>
