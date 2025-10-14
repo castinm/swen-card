@@ -11,7 +11,7 @@ async function with_cache(key: string, fetch: Function): Promise<Article | undef
     return cache.get(key)
   else {
     if (!data.length) {
-      let response = await fetch("/static/fake_articles.json");
+      let response = await fetch("/fake_articles.json");
       data = JSON.parse(await response.text());
     }
     let item: Article | undefined = data.find(i => i.slug == key);
