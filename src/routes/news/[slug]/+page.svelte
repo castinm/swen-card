@@ -9,7 +9,7 @@
 
 <div class="fixed flex items-center justify-center w-screen h-screen">
   <div class="wrapper flex items-start justify-center w-auto h-auto gap-16">
-    <NewsCard article={article}/>
+    <NewsCard article={article} type="default"/>
     <NewsCard article={article} type="long"/>
     <NewsCard article={article} type="recommended"/>
   </div>

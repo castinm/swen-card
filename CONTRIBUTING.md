@@ -5,7 +5,7 @@ Thank you for your interest in contributing to SvelteKit! This guide will help y
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/castinm/kit.git`
+2. Clone your fork: `git clone https://github.com/castinm/swen-card.git`
 3. Install dependencies: `pnpm install`
 4. Create a new branch: `git checkout -b your-feature-name`
 

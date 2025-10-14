@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Side } from '$lib/types';
+  import { Side, type Article } from '$lib/types';
   import Front from './Front/index.svelte';
   import Back from './Back/index.svelte';
 
 
-  let { article, type = 'default' } = $props();
+  let { article, type = 'default' } : { article: Article, type: string } = $props();
   let side = $state(Side.Front);
 
   // Toggle card side
@@ -28,7 +28,7 @@
 
   .card .content {
     perspective: 1000px;
-    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
     transform-style: preserve-3d;
   }
 
