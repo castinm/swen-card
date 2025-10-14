@@ -1,0 +1,216 @@
+openapi: 3.1.0
+info:
+  title: News API
+  description: API for retrieving news articles with detailed metadata and context
+  version: 1.0.0
+servers:
+  - url: http://localhost:5173/api/mock
+    description: Local development server
+  - url: https://sway-card.netlify.app/api/mock
+    description: Production server
+
+paths:
+  /news/{id}:
+    get:
+      summary: Get a single news article by ID
+      description: Retrieves a detailed news article including content, metadata, media, and contextual information
+      operationId: getArticleById
+      tags:
+        - News
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Unique identifier for the article
+          schema:
+            type: string
+            example: "art_20251014_005"
+      responses:
+        '200':
+          description: Article retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+        '404':
+          description: Article not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /news/list:
+    get:
+      summary: Get a list of news articles
+      description: Retrieves a list of news articles with full details
+      operationId: getArticleList
+      tags:
+        - News
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum number of articles to return
+          schema:
+            type: integer
+            default: 10
+            minimum: 1
+            maximum: 100
+        - name: category
+          in: query
+          description: Filter articles by category
+          schema:
+            type: string
+            enum: [local, global, technology, environment, politics]
+      responses:
+        '200':
+          description: List of articles retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+
+components:
+  schemas:
+    Article:
+      type: object
+      required:
+        - id
+        - slug
+        - title
+        - body
+        - summary
+        - category
+        - published_at
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the article
+          example: "art_20251014_005"
+        slug:
+          type: string
+          description: URL-friendly version of the article title
+          example: "global-water-shortage-looms-as-droughts-hit-record-levels"
+        title:
+          type: string
+          description: Article headline
+          example: "Global Water Shortage Looms as Droughts Hit Record Levels"
+        body:
+          type: string
+          description: Full article content
+          example: "A UN report warns that over 2 billion people could face severe water shortages..."
+        summary:
+          type: string
+          description: Brief summary of the article
+          example: "The UN warns that the world is approaching a critical water crisis..."
+        tags:
+          type: array
+          items:
+            type: string
+          description: Keywords associated with the article
+          example: ["climate", "environment", "policy", "global issues"]
+        category:
+          type: string
+          description: Article category
+          enum: [local, global, technology, environment, politics]
+          example: "local"
+        relevance_score:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          description: Relevance score of the article
+          example: 0.95
+        source_url:
+          type: string
+          format: uri
+          description: Original source URL
+          example: "https://www.globalwatch.news/environment/un-water-crisis-report"
+        publisher:
+          type: string
+          description: Name of the publishing organization
+          example: "Global Watch News"
+        published_at:
+          type: string
+          format: date-time
+          description: Publication timestamp
+          example: "2025-10-11T14:25:00Z"
+        ingested_at:
+          type: string
+          format: date-time
+          description: Timestamp when article was ingested into system
+          example: "2025-10-14T11:15:00Z"
+        media:
+          $ref: '#/components/schemas/Media'
+        context:
+          $ref: '#/components/schemas/Context'
+
+    Media:
+      type: object
+      properties:
+        featured_image_url:
+          type: string
+          format: uri
+          description: URL of the featured image
+          example: "https://images.unsplash.com/photo-1588776814546-1235c1f69d1a?w=1200"
+        related_video_url:
+          type: string
+          format: uri
+          description: URL of related video content
+          example: "https://www.youtube.com/watch?v=UNWaterCrisis"
+        media_justification:
+          type: string
+          description: Explanation of media selection
+          example: "Image of cracked earth in a drought-stricken region of southern Spain."
+
+    Context:
+      type: object
+      properties:
+        wikipedia_snippet:
+          type: string
+          description: Relevant Wikipedia excerpt for context
+          example: "Water scarcity affects over 40% of the global population..."
+        social_sentiment:
+          type: string
+          description: Overall social media sentiment
+          example: "Negative — strong concern and frustration among environmental advocates."
+        search_trend:
+          type: string
+          description: Search trend information
+          example: "Global searches for 'water crisis' surged 300% after the UN report release."
+        geo:
+          $ref: '#/components/schemas/GeoLocation'
+
+    GeoLocation:
+      type: object
+      properties:
+        lat:
+          type: number
+          format: float
+          description: Latitude coordinate
+          example: 40.4168
+        lng:
+          type: number
+          format: float
+          description: Longitude coordinate
+          example: -3.7038
+        map_url:
+          type: string
+          format: uri
+          description: Google Maps URL for location
+          example: "https://maps.google.com/?q=40.4168,-3.7038"
+
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: Error message
+          example: "Article not found"
+        code:
+          type: string
+          description: Error code
+          example: "NOT_FOUND"

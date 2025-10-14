@@ -25,7 +25,6 @@
 </div>
 
 <style>
-
   .card .content {
     perspective: 1000px;
     transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
