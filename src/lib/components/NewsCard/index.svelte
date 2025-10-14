@@ -14,19 +14,34 @@
   let image_url = $derived(article.media.featured_image_url);
 </script>
 
-<div class="card {type} rounded-md relative overflow-hidden text-white box-border">
-  <div class="transition"></div>
-  <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{image_url}');">
-    <div class="overlay absolute inset-0 bg-[#232323] opacity-70"></div>
-  </div>
-  {#if side === Side.Front}
+<div class="card {type} {side === Side.Front ? 'front': 'back'} rounded-md relative overflow-hidden text-white box-border">
+  <div class="content absolute inset-0">
+    <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{image_url}');">
+      <div class="overlay absolute inset-0 bg-[#232323] opacity-70"></div>
+    </div>
     <Front on_switch={toggle_side} {article} {type}/>
-  {:else}
     <Back on_switch={toggle_side} {article} {type}/>
-  {/if}
+  </div>
 </div>
 
 <style>
+
+  .card .content {
+    perspective: 1000px;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    transform-style: preserve-3d;
+  }
+
+  :global(.card .content .front, .card .content .back) {
+    backface-visibility: hidden;
+  }
+  :global(.card .content .back) {
+    transform: rotateY(180deg);
+  }
+  .card.back .content {
+    transform: rotateY(180deg);
+  }
+
   .transition {
     z-index: 3;
   }
