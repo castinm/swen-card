@@ -55,7 +55,7 @@
   }
   .back .body {
     height: auto;
-    max-height: 60px;
+    max-height: 70px;
   }
   .back.default .body {
     top: 66px;
