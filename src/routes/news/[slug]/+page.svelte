@@ -7,17 +7,10 @@
   let article: Article = $derived(data.article);
 </script>
 
-<div class="container">
-  <NewsCard article={article}/>
+<div class="fixed flex items-center justify-center w-screen h-screen">
+  <div class="wrapper flex items-start justify-center w-auto h-auto gap-16">
+    <NewsCard article={article}/>
+    <NewsCard article={article} type="long"/>
+    <NewsCard article={article} type="recommended"/>
+  </div>
 </div>
-
-<style>
-  .container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  }
-</style>

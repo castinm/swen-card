@@ -1,16 +1,23 @@
 <script lang="ts">
-  let { category } : { category: string } = $props();
+  let { category, type } : { category: string, type: string } = $props();
 </script>
 
-<div class="category {category} text-white w-auto, h-[30px] px-[25px] rounded-[20px] flex items-center justify-center">
+<div class="category {category} {type} text-white w-auto rounded-[20px] flex items-center justify-center capitalize text-sm cursor-pointer">
   { category }
 </div>
 
 <style>
   .category.local {
-    background-color: #232323;
+    background-color: #FF6A7E;
   }
-  .category.international {
-    background-color: #232323;
+
+  /* card specific css */
+  .category.default {
+    height: 24px;
+    padding: 0px 15px;
+  }
+  .category.long,.category.recommended {
+    height: 32px;
+    padding: 0px 25px;
   }
 </style>
