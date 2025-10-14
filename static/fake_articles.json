@@ -1,0 +1,147 @@
+[
+  {
+    "id": "art_20251014_001",
+    "slug": "Breakthrough-in-Battery-Technology-Promises-5-Minute-EV-Charging",
+    "title": "Breakthrough in Battery Technology Promises 5-Minute EV Charging",
+    "body": "A team of researchers from the University of Berlin has unveiled a new lithium-silicon hybrid battery that can charge an electric vehicle in under five minutes. The innovation uses a unique anode structure that prevents overheating and degradation, potentially reshaping the future of sustainable transport.",
+    "summary": "Scientists have developed a lithium-silicon hybrid battery capable of ultra-fast charging without compromising safety or lifespan.",
+    "tags": ["technology", "energy", "innovation", "electric vehicles"],
+    "category": "local",
+    "relevance_score": 0.92,
+    "source_url": "https://www.techpulse.org/articles/5min-ev-battery-breakthrough",
+    "publisher": "TechPulse",
+    "published_at": "2025-10-12T08:45:00Z",
+    "ingested_at": "2025-10-14T10:30:00Z",
+    "media": {
+      "featured_image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
+      "related_video_url": "https://www.youtube.com/watch?v=EVbatteryBreakthrough",
+      "media_justification": "The image shows the research team and prototype battery during testing."
+    },
+    "context": {
+      "wikipedia_snippet": "Lithium–silicon batteries are a class of rechargeable batteries that use silicon as the anode material, offering higher energy density than traditional lithium-ion designs.",
+      "social_sentiment": "Positive — trending excitement around sustainable energy and faster EV adoption.",
+      "search_trend": "EV battery technology searches spiked 230% in the past 48 hours following the announcement.",
+      "geo": {
+        "lat": 52.52,
+        "lng": 13.405,
+        "map_url": "https://maps.google.com/?q=52.5200,13.4050"
+      }
+    }
+  },
+  {
+    "id": "art_20251014_002",
+    "slug": "AI-Predicts-Crop-Yields-with-98%-Accuracy-Using-Satellite-Data",
+    "title": "AI Predicts Crop Yields with 98% Accuracy Using Satellite Data",
+    "body": "Agritech startup AgriNova has developed an AI model that predicts crop yields across Africa with near-perfect accuracy by analyzing satellite imagery and weather data. The tool aims to help farmers optimize planting cycles and reduce food insecurity.",
+    "summary": "AI-based crop prediction is helping African farmers increase productivity and sustainability.",
+    "tags": ["AI", "agriculture", "sustainability", "data science"],
+    "category": "local",
+    "relevance_score": 0.88,
+    "source_url": "https://www.greenfuture.ai/news/ai-crop-yield-prediction",
+    "publisher": "GreenFuture AI",
+    "published_at": "2025-10-10T11:20:00Z",
+    "ingested_at": "2025-10-14T09:10:00Z",
+    "media": {
+      "featured_image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200",
+      "related_video_url": "",
+      "media_justification": "A satellite view of farmlands analyzed by the AI model."
+    },
+    "context": {
+      "wikipedia_snippet": "Precision agriculture integrates AI and satellite technologies to optimize crop management and yield.",
+      "social_sentiment": "Positive — farmers and investors are enthusiastic about AI-driven agriculture.",
+      "search_trend": "Search interest in “AI farming” rose 140% this week.",
+      "geo": {
+        "lat": -1.2921,
+        "lng": 36.8219,
+        "map_url": "https://maps.google.com/?q=-1.2921,36.8219"
+      }
+    }
+  },
+  {
+    "id": "art_20251014_003",
+    "slug": "New-Coral-Reef-Restoration-Technique-Shows-Promising-Results",
+    "title": "New Coral Reef Restoration Technique Shows Promising Results",
+    "body": "Marine biologists in Australia have successfully grown coral fragments using a micropropagation technique that accelerates reef recovery by 60%. The Great Barrier Reef restoration project has already seen significant biodiversity return in test zones.",
+    "summary": "Australian scientists are speeding up coral reef restoration with advanced micropropagation techniques.",
+    "tags": ["environment", "marine biology", "conservation", "climate"],
+    "category": "local",
+    "relevance_score": 0.81,
+    "source_url": "https://www.oceanwatch.au/articles/coral-restoration-technique",
+    "publisher": "OceanWatch",
+    "published_at": "2025-09-28T16:00:00Z",
+    "ingested_at": "2025-10-14T10:45:00Z",
+    "media": {
+      "featured_image_url": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1200",
+      "related_video_url": "https://www.youtube.com/watch?v=ReefHealing2025",
+      "media_justification": "Image shows divers planting coral fragments on a reef bed."
+    },
+    "context": {
+      "wikipedia_snippet": "Coral reef restoration involves techniques like coral gardening and microfragmentation to help reefs recover from bleaching.",
+      "social_sentiment": "Positive — conservationists highlight hope for marine ecosystems.",
+      "search_trend": "Interest in “coral restoration” increased 85% in the last month.",
+      "geo": {
+        "lat": -18.2871,
+        "lng": 147.6992,
+        "map_url": "https://maps.google.com/?q=-18.2871,147.6992"
+      }
+    }
+  },
+  {
+    "id": "art_20251014_004",
+    "slug": "Quantum-Encryption-Startup-Secures-$50M-in-Series-B-Funding",
+    "title": "Quantum Encryption Startup Secures $50M in Series B Funding",
+    "body": "CypherQ, a quantum security startup, has raised $50 million to scale its quantum-resistant encryption technology. The funding round was led by Horizon Ventures and signals growing concern about post-quantum cybersecurity threats.",
+    "summary": "Quantum encryption firm CypherQ raises $50M to advance post-quantum cybersecurity defenses.",
+    "tags": ["cybersecurity", "quantum computing", "startups", "investment"],
+    "category": "local",
+    "relevance_score": 0.86,
+    "source_url": "https://www.securebyte.io/news/cypherq-series-b",
+    "publisher": "SecureByte",
+    "published_at": "2025-10-13T09:50:00Z",
+    "ingested_at": "2025-10-14T10:00:00Z",
+    "media": {
+      "featured_image_url": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=1200",
+      "related_video_url": "",
+      "media_justification": "Photo of a quantum processor used in encryption tests."
+    },
+    "context": {
+      "wikipedia_snippet": "Quantum cryptography uses principles of quantum mechanics to perform secure communication.",
+      "social_sentiment": "Mixed — optimism from investors, skepticism from security analysts.",
+      "search_trend": "Searches for “quantum encryption” up 90% this week.",
+      "geo": {
+        "lat": 37.7749,
+        "lng": -122.4194,
+        "map_url": "https://maps.google.com/?q=37.7749,-122.4194"
+      }
+    }
+  },
+  {
+    "id": "art_20251014_005",
+    "slug": "Global-Water-Shortage-Looms-as-Droughts-Hit-Record-Levels",
+    "title": "Global Water Shortage Looms as Droughts Hit Record Levels",
+    "body": "A UN report warns that over 2 billion people could face severe water shortages by 2035 due to persistent droughts and mismanagement of freshwater resources. Experts call for urgent policy action and large-scale water recycling initiatives.",
+    "summary": "The UN warns that the world is approaching a critical water crisis, urging immediate action on conservation.",
+    "tags": ["climate", "environment", "policy", "global issues"],
+    "category": "local",
+    "relevance_score": 0.95,
+    "source_url": "https://www.globalwatch.news/environment/un-water-crisis-report",
+    "publisher": "Global Watch News",
+    "published_at": "2025-10-11T14:25:00Z",
+    "ingested_at": "2025-10-14T11:15:00Z",
+    "media": {
+      "featured_image_url": "https://images.unsplash.com/photo-1588776814546-1235c1f69d1a?w=1200",
+      "related_video_url": "https://www.youtube.com/watch?v=UNWaterCrisis",
+      "media_justification": "Image of cracked earth in a drought-stricken region of southern Spain."
+    },
+    "context": {
+      "wikipedia_snippet": "Water scarcity affects over 40% of the global population and is expected to rise due to climate change and population growth.",
+      "social_sentiment": "Negative — strong concern and frustration among environmental advocates.",
+      "search_trend": "Global searches for “water crisis” surged 300% after the UN report release.",
+      "geo": {
+        "lat": 40.4168,
+        "lng": -3.7038,
+        "map_url": "https://maps.google.com/?q=40.4168,-3.7038"
+      }
+    }
+  }
+]
