@@ -14,9 +14,9 @@
   let image_url = $derived(article.media.featured_image_url);
 </script>
 
-<div class="card {type} {side === Side.Front ? 'front': 'back'} rounded-md relative overflow-hidden text-white box-border">
-  <div class="content rounded-md absolute inset-0">
-    <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{image_url}');">
+<div class="card {type} {side === Side.Front ? 'front': 'back'} relative rounded-md overflow-hidden text-white box-border bg-transparent">
+  <div class="content absolute inset-0 bg-transparent">
+    <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat rounded-md" style="background-image: url('{image_url}');">
       <div class="overlay absolute inset-0 bg-[#232323] opacity-70"></div>
     </div>
     <Front on_switch={toggle_side} {article} {type}/>

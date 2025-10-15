@@ -21,7 +21,7 @@
   let published_at = $derived(format_date(article.published_at));
 </script>
 
-<div class="front absolute inset-0 {type}">
+<div class="front rounded-md overflow-hidden absolute inset-0 {type}">
   <div class="head absolute inset-x-0 box-border flex items-center justify-between">
     <Category category={article.category} {type}/>
     <Options/>

@@ -16,7 +16,7 @@
   }
 </script>
 
-<div class="back {type} absolute inset-0">
+<div class="back rounded-md overflow-hidden {type} absolute inset-0">
   <div class="head absolute inset-x-0 flex items-center justify-between">
     <div class="author flex items-center gap-[10px]">
       <div
