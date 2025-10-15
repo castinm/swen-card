@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Article } from "$lib/types";
+  import { tick } from "svelte";
 
   let { on_switch, article, type }: {
     on_switch: () => void,
@@ -8,12 +9,23 @@
   } = $props();
 
   let body: HTMLDivElement | null = $state(null);
+  let playing: boolean = $state(false);
+  let video_loaded: boolean = $state(false);
+  let video: HTMLVideoElement | null =  $state(null);
 
+  // toggle video playback
+  const toggle_playing = () => playing = !playing;
 
-  function trim_body(content: string) {
-    if (!body) return;
-    let rect = body.getBoundingClientRect();
-  }
+  // play or pause video on state change
+  $effect(() => {
+    if (!video) return;
+    if (playing) {
+      video.addEventListener('ended', () => playing = false);
+      video.play();
+    } else {
+      video.pause();
+    }
+  })
 </script>
 
 <div class="back rounded-md overflow-hidden {type} absolute inset-0">
@@ -26,19 +38,35 @@
       <span class="name text-xs md:text-sm font-bold">Wade Warren</span>
     </div>
     <div class="company w-[36px] aspect-square rounded overflow-hidden">
-      <img src="/vice_logo.png" alt="company"/>
+        <img src="/vice_logo.png" alt="company"/>
     </div>
   </div>
-  <div bind:this={body} class="body absolute px-[15px] text-sm md:text-[15px] inset-x-0 h-[80px] overflow-hidden">
+  <div bind:this={body} class="body absolute px-[15px] text-sm md:text-[15px] inset-x-0 h-[80px] overflow-hidden transition-all { playing && 'opacity-0' }">
     {article.body}
   </div>
+  <div class="video-player absolute inset-0 ">
+    <video bind:this={video} id="related_video" class="scale-[1.5] h-full w-full" class:opacity-0={!playing}>
+      <source src="{article.media.related_video_url}" type="video/mp4"/>
+      <track kind="captions"/>
+    </video>
+  </div>
   <div class="footer flex items-center justify-between absolute bottom-0 inset-x-0 p-[15px]">
-    <button onclick={on_switch} class="cursor-pointer" aria-label="flip view">
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate3d-icon lucide-rotate-3d">
-          <path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
-      </span>
-    </button>
+    <div class="flex gap-[20px]">
+      <button onclick={on_switch} class="cursor-pointer" aria-label="flip view">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate3d-icon lucide-rotate-3d">
+            <path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg>
+        </span>
+      </button>
+      {#if article.media.related_video_url.length }
+        <div class="video flex items-center justify-center {playing ? 'playing' : 'paused'}">
+          <button
+            onclick={toggle_playing}
+            class="rounded-full w-[30px] border h-[30px] aspect-square bg-center bg-no-repeat cursor-pointer"
+            aria-label="play video"></button>
+        </div>
+      {/if}
+    </div>
     <a href="#noop" class="cursor-pointer flex items-center justify-center gap-1 bg-[#FF6A7E] rounded text-xs w-[96px] h-[30px]">
       Read more
       <span class="inline-block w-[15px] aspect-square">
@@ -92,6 +120,17 @@
   }
   .back.recommended .footer {
     padding: 30px;
+  }
+
+  /* video */
+  .video button {
+    background-size: 70%;
+  }
+  .video.playing button {
+    background-image: url('/pause.svg');
+  }
+  .video.paused button {
+    background-image: url('/play.svg');
   }
 
   @media screen and (max-width: 768px) {

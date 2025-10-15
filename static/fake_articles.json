@@ -72,7 +72,7 @@
     "ingested_at": "2025-10-14T10:45:00Z",
     "media": {
       "featured_image_url": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1200",
-      "related_video_url": "https://www.youtube.com/watch?v=ReefHealing2025",
+      "related_video_url": "",
       "media_justification": "Image shows divers planting coral fragments on a reef bed."
     },
     "context": {
@@ -130,7 +130,7 @@
     "ingested_at": "2025-10-14T11:15:00Z",
     "media": {
       "featured_image_url": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=1200",
-      "related_video_url": "https://www.youtube.com/watch?v=UNWaterCrisis",
+      "related_video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
       "media_justification": "Image of cracked earth in a drought-stricken region of southern Spain."
     },
     "context": {
