@@ -23,13 +23,13 @@
         class="avatar w-[36px] aspect-square rounded-full overflow-hidden cursor-pointer bg-no-repeat bg-center bg-cover"
         style="background-image: url('/author.jpg');">
       </div>
-      <span class="name text-xs md:text-base font-bold">Wade Warren</span>
+      <span class="name text-xs md:text-sm font-bold">Wade Warren</span>
     </div>
     <div class="company w-[36px] aspect-square rounded overflow-hidden">
       <img src="/vice_logo.png" alt="company"/>
     </div>
   </div>
-  <div bind:this={body} class="body absolute px-[15px] text-xs md:text-[16px] inset-x-0 h-[80px] overflow-hidden">
+  <div bind:this={body} class="body absolute px-[15px] text-xs md:text-[15px] inset-x-0 h-[80px] overflow-hidden">
     {article.body}
   </div>
   <div class="footer flex items-center justify-between absolute bottom-0 inset-x-0 p-[15px]">
