@@ -16,7 +16,7 @@
       Back
     </a>
   </nav>
-  <div class="wrapper relative w-full pt-14 pb-32 md:pt-0 md:pb-0 h-full md:w-auto md:h-auto flex flex-col md:flex-row overflow-auto items-start justify-start md:justify-center gap-4 md:gap-16 p-2 md:p-0">
+  <div class="wrapper relative w-full mt-20 pb-32 md:mt-0 md:pb-0 h-full md:w-auto md:h-auto flex flex-col md:flex-row overflow-auto items-start justify-start md:justify-center gap-4 md:gap-16 p-2 md:p-0">
     <NewsCard article={article} type="default"/>
     <NewsCard article={article} type="long"/>
     <NewsCard article={article} type="recommended"/>
