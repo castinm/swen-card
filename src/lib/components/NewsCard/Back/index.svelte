@@ -29,7 +29,7 @@
       <img src="/vice_logo.png" alt="company"/>
     </div>
   </div>
-  <div bind:this={body} class="body absolute px-[15px] text-xs md:text-[15px] inset-x-0 h-[80px] overflow-hidden">
+  <div bind:this={body} class="body absolute px-[15px] text-sm md:text-[15px] inset-x-0 h-[80px] overflow-hidden">
     {article.body}
   </div>
   <div class="footer flex items-center justify-between absolute bottom-0 inset-x-0 p-[15px]">
@@ -99,6 +99,16 @@
       top: 56px;
       -webkit-line-clamp: 6;
       line-clamp: 6;
+    }
+    .back.recommended .head {
+      top: 15px;
+      height: 32px;
+      padding: 0px 15px;
+    }
+    .back.recommended .body {
+      top: 112px;
+      padding: 0px 15px;
+      max-height: 320px;
     }
   }
   @media screen and (max-width: 456px) {

@@ -58,6 +58,9 @@
     height: 60px;
     padding: 0px 30px;
   }
+  .footer.recommended span {
+    font-size: .9em;
+  }
   .footer.default .actions,
   .footer.long .actions {
     gap: 15px;
@@ -68,5 +71,12 @@
   .preview:hover svg {
     transition: transform 500ms linear;
     transform: translateX(3px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer.recommended {
+      height: 60px;
+      padding: 0px 15px;
+    }
   }
 </style>

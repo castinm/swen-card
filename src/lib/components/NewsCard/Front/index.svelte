@@ -83,13 +83,17 @@
       top: 10px;
       padding: 0 10px;
     }
+    .front.recommended .head {
+      top: 15px;
+      padding: 0px 15px;
+    }
     .front.default .body,
     .front.long .body {
       padding: 0px 10px;
       bottom: 55px;
     }
     .front.recommended .body {
-      padding: 0px 20px;
+      padding: 0px 15px;
     }
   }
 </style>
