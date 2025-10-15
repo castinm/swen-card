@@ -87,6 +87,9 @@
     padding: 30px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
+    .card {
+      width: 100% !important;
+    }
   }
 </style>
