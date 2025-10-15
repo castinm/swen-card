@@ -100,4 +100,11 @@
       line-clamp: 3;
     }
   }
+  @media screen and (max-width: 456px) {
+    .back.default .body {
+      top: 56px;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+  }
 </style>

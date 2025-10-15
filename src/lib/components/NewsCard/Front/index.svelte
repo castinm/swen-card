@@ -36,20 +36,22 @@
 <style>
   /* card specific css */
   /* .head */
-  .front.default .head {
-    padding: 0px 15px;
-    top: 15px;
-    height: 24px;
-  }
+  .front.default .head,
   .front.long .head {
     padding: 0px 15px;
     top: 15px;
+  }
+
+  .front.default .head {
+    height: 24px;
+  }
+  .front.long .head,
+  .front.recommended .head {
     height: 32px;
   }
   .front.recommended .head {
     top: 30px;
     padding: 0px  30px;
-    height: 32px;
   }
 
   /* .body */
@@ -64,9 +66,24 @@
   .front.recommended .body {
     bottom: 90px;
     padding: 0px 30px;
-    max-height: 300px; /* Find out exact value */
+    height: auto;
   }
   .front.long .body .date {
     margin-bottom: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    .front.default .head,
+    .front.long .head {
+      top: 10px;
+      padding: 0 10px;
+    }
+    .front.default .body,
+    .front.long .body {
+      padding: 0px 10px;
+      bottom: 55px;
+    }
+    .front.recommended .body {
+      padding: 0px 20px;
+    }
   }
 </style>
