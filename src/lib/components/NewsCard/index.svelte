@@ -15,8 +15,10 @@
 </script>
 
 <div class="card {type} {side === Side.Front ? 'front': 'back'} relative rounded-md overflow-hidden text-white box-border bg-transparent">
-  <div class="content absolute inset-0 bg-transparent">
-    <div class="background absolute inset-0 bg-cover bg-center bg-no-repeat rounded-md" style="background-image: url('{image_url}');">
+  <div class="content absolute inset-0 bg-transparent rounded-md">
+    <div
+      class="background absolute inset-0 bg-cover bg-center bg-no-repeat rounded-md overflow-clip"
+      style="background-image: url('{image_url}');">
       <div class="overlay absolute inset-0 bg-[#232323] opacity-70"></div>
     </div>
     <Front on_switch={toggle_side} {article} {type}/>
