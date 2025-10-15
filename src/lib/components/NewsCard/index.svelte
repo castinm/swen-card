@@ -68,6 +68,10 @@
   .background {
     z-index: 0;
   }
+  .card:hover .background {
+    transition: all 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(1.1);
+  }
 
   /* Different card types styling, structure is mostly the same so we only need to make a few css adjustments to get the 3 variants */
   .card {

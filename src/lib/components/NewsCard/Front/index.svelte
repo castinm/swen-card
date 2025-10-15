@@ -61,6 +61,9 @@
   .front .body {
     height: auto;
   }
+  .front.recommended .body .title {
+    font-size: 20px;
+  }
   .front.default .body,
   .front.long .body {
     padding: 0px 15px;
