@@ -26,7 +26,7 @@
     <Category category={article.category} {type}/>
     <Options/>
   </div>
-  <div class="body absolute inset-x-0 h-44 flex flex-col items-start justify-center">
+  <div class="body absolute inset-x-0 h-44 flex flex-col items-start justify-center text-xs md:text-base">
     <div class="date">{published_at}</div>
     <div class="title">{article.title}</div>
   </div>

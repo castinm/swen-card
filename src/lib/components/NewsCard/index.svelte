@@ -67,6 +67,7 @@
   /* Different card types styling, structure is mostly the same so we only need to make a few css adjustments to get the 3 variants */
   .card {
     --padding: 15px 10px 15px 15px;
+    max-width: 100%;;
     width: 300px;
     padding: 15px;
   }
@@ -81,5 +82,10 @@
     width: 600px;
     height: 450px;
     padding: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .card.recommended {
+    }
   }
 </style>

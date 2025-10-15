@@ -6,6 +6,14 @@
     article: Article,
     type: string
   } = $props();
+
+  let body: HTMLDivElement | null = $state(null);
+
+
+  function trim_body(content: string) {
+    if (!body) return;
+    let rect = body.getBoundingClientRect();
+  }
 </script>
 
 <div class="back {type} absolute inset-0">
@@ -15,13 +23,13 @@
         class="avatar w-[36px] aspect-square rounded-full overflow-hidden cursor-pointer bg-no-repeat bg-center bg-cover"
         style="background-image: url('/author.jpg');">
       </div>
-      <span class="name">Wade Warren</span>
+      <span class="name text-xs md:text-base">Wade Warren</span>
     </div>
     <div class="company w-[36px] aspect-square rounded overflow-hidden">
       <img src="/vice_logo.png" alt="company"/>
     </div>
   </div>
-  <div class="body absolute px-[15px] text-[16px] top-[77px] inset-x-0 h-[80px] overflow-hidden">
+  <div bind:this={body} class="body absolute px-[15px] text-xs md:text-[16px] inset-x-0 h-[80px] overflow-hidden">
     {article.body}
   </div>
   <div class="footer flex items-center justify-between absolute bottom-0 inset-x-0 p-[15px]">
@@ -55,7 +63,14 @@
   }
   .back .body {
     height: auto;
-    max-height: 70px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* Number of lines to show */
+    line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word; /* ADD THIS */
+    overflow-wrap: break-word; /* AND THIS */
+    text-overflow: ellipsis;
   }
   .back.default .body {
     top: 66px;
@@ -76,5 +91,13 @@
   }
   .back.recommended .footer {
     padding: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .back.default .body {
+      top: 56px;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
   }
 </style>
