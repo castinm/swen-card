@@ -45,7 +45,13 @@
     {article.body}
   </div>
   <div class="video-player absolute inset-0 ">
-    <video bind:this={video} id="related_video" class="scale-[1.5] h-full w-full" class:opacity-0={!playing}>
+    <video
+      bind:this={video}
+      id="related_video"
+      class="scale-[1.5] h-full w-full"
+      class:opacity-0={!playing}
+      playsinline={true}
+      controls={false}>
       <source src="{article.media.related_video_url}" type="video/mp4"/>
       <track kind="captions"/>
     </video>
