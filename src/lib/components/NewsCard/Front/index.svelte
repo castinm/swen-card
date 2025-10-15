@@ -27,8 +27,11 @@
     <Options/>
   </div>
   <div class="body absolute inset-x-0 h-44 flex flex-col items-start justify-center text-xs md:text-base">
-    <div class="date">{published_at}</div>
-    <div class="title">{article.title}</div>
+    <div class="date font-light text-sm">{published_at}</div>
+    <div class="title font-bold text-xl">{article.title}</div>
+    {#if type === 'recommended'}
+	    <div class="summary">{article.summary}</div>
+    {/if}
   </div>
   <Footer {on_switch} {type}/>
 </div>
@@ -70,6 +73,9 @@
   }
   .front.long .body .date {
     margin-bottom: 15px;
+  }
+  .front.recommended .body .date {
+    margin-bottom: 30px;
   }
   @media screen and (max-width: 768px) {
     .front.default .head,
