@@ -14,7 +14,7 @@
     "ingested_at": "2025-10-14T10:30:00Z",
     "media": {
       "featured_image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
-      "related_video_url": "https://www.youtube.com/watch?v=EVbatteryBreakthrough",
+      "related_video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       "media_justification": "The image shows the research team and prototype battery during testing."
     },
     "context": {
@@ -101,7 +101,7 @@
     "ingested_at": "2025-10-14T10:00:00Z",
     "media": {
       "featured_image_url": "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=1200",
-      "related_video_url": "",
+      "related_video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
       "media_justification": "Photo of a quantum processor used in encryption tests."
     },
     "context": {

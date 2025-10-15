@@ -28,7 +28,7 @@
   </div>
   <div class="body absolute inset-x-0 h-44 flex flex-col items-start justify-center text-xs md:text-base">
     <div class="date font-light text-sm">{published_at}</div>
-    <div class="title font-bold text-xl">{article.title}</div>
+    <div class="title font-bold text-base">{article.title}</div>
     {#if type === 'recommended'}
 	    <div class="summary">{article.summary}</div>
     {/if}
