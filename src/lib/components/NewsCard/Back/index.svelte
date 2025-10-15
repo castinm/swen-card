@@ -67,13 +67,14 @@
     -webkit-line-clamp: 8; /* Number of lines to show */
     line-clamp: 8;
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    word-break: break-word; /* ADD THIS */
-    overflow-wrap: break-word; /* AND THIS */
+    word-break: break-word;
+    overflow-wrap: break-word;
     text-overflow: ellipsis;
   }
   .back.default .body {
     top: 66px;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    line-clamp: 4;
   }
   .back.long .body {
     top: 77px;
@@ -96,8 +97,8 @@
   @media screen and (max-width: 768px) {
     .back.default .body {
       top: 56px;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
+      -webkit-line-clamp: 6;
+      line-clamp: 6;
     }
   }
   @media screen and (max-width: 456px) {
