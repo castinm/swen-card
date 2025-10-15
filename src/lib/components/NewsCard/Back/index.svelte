@@ -98,8 +98,8 @@
   .back .body {
     height: auto;
     display: -webkit-box;
-    -webkit-line-clamp: 8; /* Number of lines to show */
-    line-clamp: 8;
+    -webkit-line-clamp: 10; /* Number of lines to show */
+    line-clamp: 10;
     -webkit-box-orient: vertical;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -142,8 +142,8 @@
   @media screen and (max-width: 768px) {
     .back.default .body {
       top: 56px;
-      -webkit-line-clamp: 6;
-      line-clamp: 6;
+      -webkit-line-clamp: 8;
+      line-clamp: 8;
     }
     .back.recommended .head {
       top: 15px;
@@ -159,8 +159,8 @@
   @media screen and (max-width: 456px) {
     .back.default .body {
       top: 56px;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
     }
   }
 </style>
